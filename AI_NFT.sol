@@ -9,14 +9,20 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract AI_NFT is ERC721URIStorage, Ownable {
 
-	//Counter function for tracking NFT colelction 
-	using Counters for Counters.Counter;
-	Counters.Counter private _tokenIds;
+	 using Counters for Counters.Counter;
 
-	constructor() ERC721("AI NFT Contract", "AINFT"){}
+    constructor() public ERC721("AI_NFT", "NFT") {}
 
-	function totalSupply() public view returns (uint256) {
-	return _tokenIds.current()
+    function mintNFT(address recipient, string memory tokenURI)
+        public onlyOwner
+        returns (uint256)
+    {
+        _tokenIds.increment();
 
-	}
+        uint256 newItemId = _tokenIds.current();
+        _mint(recipient, newItemId);
+        _setTokenURI(newItemId, tokenURI);
+
+        return newItemId;
+    }
 }
