@@ -1,0 +1,24 @@
+{
+  "name": "nft_init",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperBrava/NFT_Init.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuperBrava/NFT_Init/issues"
+  },
+  "homepage": "https://github.com/SuperBrava/NFT_Init#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.2",
+    "openzeppelin-solidity": "4.4.2"
+  }
+}
