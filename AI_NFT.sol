@@ -10,6 +10,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 contract AI_NFT is ERC721URIStorage, Ownable {
 
 	 using Counters for Counters.Counter;
+    Counters.Counter private _tokenIds;
 
     constructor() public ERC721("AI_NFT", "NFT") {}
 
